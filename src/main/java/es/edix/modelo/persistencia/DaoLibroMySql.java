@@ -48,7 +48,7 @@ public class DaoLibroMySql implements DaoLibro {
     @Override
     public List<Libro> list() {
         try {                  
-			List<Libro> libros = entityManager.createQuery("from " + "Libro" + " libro").getResultList();			
+			List<Libro> libros = entityManager.createQuery("from Libro libro").getResultList();			
             return libros;
         } catch (Exception e) {
             System.out.println("ERROR: " + e.getLocalizedMessage());

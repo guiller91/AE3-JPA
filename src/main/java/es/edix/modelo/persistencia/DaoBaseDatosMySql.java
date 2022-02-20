@@ -20,11 +20,7 @@ public class DaoBaseDatosMySql implements DaoBaseDatos {
             EntityManager em = factory.createEntityManager();
             EntityTransaction et = em.getTransaction();
             et.begin();         
-            em.createNativeQuery("DROP TABLE Libreria_libro").executeUpdate();
-            em.createNativeQuery("DROP TABLE Libros").executeUpdate();
-            em.createNativeQuery("DROP TABLE Librerias").executeUpdate();
-            em.createNativeQuery("DROP TABLE Autores").executeUpdate();
-            em.createNativeQuery("DROP TABLE Editoriales").executeUpdate();
+            em.createNativeQuery("DROP database Librerias_jpa").executeUpdate();           
             et.commit();
             em.close();
             factory.close();

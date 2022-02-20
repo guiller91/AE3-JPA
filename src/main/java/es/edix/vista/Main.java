@@ -14,7 +14,11 @@ import es.edix.modelo.persistencia.interfaz.DaoAutor;
 import es.edix.modelo.persistencia.interfaz.DaoBaseDatos;
 import es.edix.modelo.persistencia.interfaz.DaoLibreria;
 import es.edix.modelo.persistencia.interfaz.DaoLibro;
-
+/**
+ * Programa para el control de una bbdd mediante jpa-hibernate
+ * @author Guiller
+ *
+ */
 public class Main {
 
 	public static void main(String[] args) {

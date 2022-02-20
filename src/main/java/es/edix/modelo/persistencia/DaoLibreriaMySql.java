@@ -42,7 +42,7 @@ public class DaoLibreriaMySql implements DaoLibreria {
 	@Override
 	public List<Libreria> list() {
 		try {
-			List<Libreria> librerias = entityManager.createQuery("from " + "Libreria" + " libreria").getResultList();
+			List<Libreria> librerias = entityManager.createQuery("from Libreria libreria").getResultList();
 
 			return librerias;
 		} catch (Exception e) {
