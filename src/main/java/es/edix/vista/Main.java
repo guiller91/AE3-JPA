@@ -14,7 +14,6 @@ import es.edix.modelo.persistencia.interfaz.DaoAutor;
 import es.edix.modelo.persistencia.interfaz.DaoBaseDatos;
 import es.edix.modelo.persistencia.interfaz.DaoLibreria;
 import es.edix.modelo.persistencia.interfaz.DaoLibro;
-import net.bytebuddy.asm.Advice.Exit;
 /**
  * Programa para el control de una bbdd mediante jpa-hibernate
  * @author Guiller
