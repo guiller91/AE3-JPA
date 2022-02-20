@@ -14,7 +14,7 @@ Se pide realizar las siguientes consultas y mostrarlas por pantalla, cada una de
 
 ## Diseño de la base de datos:
 
-![librerias.png](src\main\resources\img/librerias.png)
+![librerias.png](src/main/resources/img/librerias.png)
 
 ## Explicación:
 
