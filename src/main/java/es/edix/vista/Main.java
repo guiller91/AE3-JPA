@@ -14,6 +14,7 @@ import es.edix.modelo.persistencia.interfaz.DaoAutor;
 import es.edix.modelo.persistencia.interfaz.DaoBaseDatos;
 import es.edix.modelo.persistencia.interfaz.DaoLibreria;
 import es.edix.modelo.persistencia.interfaz.DaoLibro;
+import net.bytebuddy.asm.Advice.Exit;
 /**
  * Programa para el control de una bbdd mediante jpa-hibernate
  * @author Guiller
@@ -28,11 +29,17 @@ public class Main {
 		DaoLibro daoLibro = new DaoLibroMySql();
 		DaoBaseDatos daoBBDD = new DaoBaseDatosMySql();
 
-		if (daoBBDD.comprobarTablas() > 0) {
-			daoBBDD.drop();
-			System.out.println("Base de datos preparada para su creación");
+		try {
+			if (daoBBDD.comprobarTablas() > 0) {
+				daoBBDD.drop();
+				System.out.println("Base de datos preparada para su creación");
+			}
+			daoBBDD.rellenarTablas();
+			
+		} catch (Exception e) {
+			System.out.println("Error en la creación de la bbdd = " + e.getLocalizedMessage());
+			System.exit(1);
 		}
-		daoBBDD.rellenarTablas();
 
 		try (Scanner sc = new Scanner(System.in)) {
 

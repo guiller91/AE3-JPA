@@ -26,13 +26,11 @@ public class Libro {
     private double precio;
     
     @ManyToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "fk_id_editorial", referencedColumnName = "id")
-   
+    @JoinColumn(name = "fk_id_editorial", referencedColumnName = "id")    
     private Editorial editorial;
    
     @ManyToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "fk_id_autor", referencedColumnName = "id")
-    
+    @JoinColumn(name = "fk_id_autor", referencedColumnName = "id")   
     private Autor autor;
 
     @ManyToMany(cascade = {CascadeType.MERGE, CascadeType.PERSIST,CascadeType.REFRESH}, fetch = FetchType.LAZY)
